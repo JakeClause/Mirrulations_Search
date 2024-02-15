@@ -35,6 +35,6 @@ services:
   mongo:
     image: mongodb/mongodb-community-server:6.0-ubi8
     volumes:
-      - ./data:/data/db  # Ensure this path matches your script's expectation
+      - ./data:/data/db  
     ports:
       - "27017:27017"
