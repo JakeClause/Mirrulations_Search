@@ -35,8 +35,6 @@ services:
   mongo:
     image: mongodb/mongodb-community-server:6.0-ubi8
     volumes:
-      - type: bind
-        source: ./data
-        target: /data/db
+      - ./data:/data/db  # Ensure this path matches your script's expectation
     ports:
       - "27017:27017"
